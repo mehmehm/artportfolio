@@ -1,0 +1,17 @@
+.gallery{
+    column-count: 4;
+    column-gap: 1em;
+    padding: 1em;
+}
+
+.gallery-item{
+    break-inside: avoid;
+    margin-bottom: 1em;
+}
+
+.gallery-item img{
+    width: 100%;
+    display: block;
+    border-radius: 8%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

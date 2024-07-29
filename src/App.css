@@ -7,6 +7,16 @@
   pointer-events: none;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(0deg, #ab7a45, #aa2254ec);
+  min-height: 100vh;
+  background-attachment: fixed;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  color: #333; /* Default text color */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

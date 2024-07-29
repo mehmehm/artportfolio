@@ -1,0 +1,54 @@
+/* Bannertext.css */
+
+.banner-text {
+    position: absolute;
+    top: 50%; /* Center text vertically */
+    left: 50%; /* Center text horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to be exactly centered */
+    color: white; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for better readability */
+    text-align: center; /* Center align text */
+    z-index: 1; /* Ensure text is on top of the images */
+  }
+  
+  .banner-text h1 {
+    font-size: 2em; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .banner-text h3 {
+    line-height: 1.2; /* Adjust this value to control the space between lines of text */
+    margin: 0; /* Remove the default margin around <h3> */
+  }
+  
+  .text-box {
+    background-color: rgba(190, 72, 94, 0.8); /* Brown background color */
+    color: white; /* Text color */
+    padding: 20px 100px; /* Space inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for better visibility */
+    text-align: center; /* Center text */
+    max-width: 80%; /* Limit the box width */
+    height: fit-content;
+    z-index: 2000; /* Ensure the text box is above the banner */
+    position: relative; /* Position relative to its container */
+  }
+  
+  .text-box h1 {
+    font-size: 2.5em; /* Adjust font size for the main heading */
+    margin: 0 0 10px; /* Adjust margins */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  h3 {
+    font-size: 1.2em; /* Adjust font size for the main heading */
+    margin: 0 0 10px; /* Adjust margins */
+    font-family: "Lumanosimo", cursive;
+    font-optical-sizing: auto;
+  }
+  
+  .text-box p {
+    font-size: 1.2em; /* Adjust font size for additional text */
+    margin: 0; /* Remove default margin */
+  }
+  
