@@ -7,6 +7,52 @@
 .gallery-item{
     break-inside: avoid;
     margin-bottom: 1em;
+    position: relative;
+    display: inline-block;
+}
+
+.gallery-item img{
+    width: 100%;
+    display: block;
+    border-radius: 8%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    border-radius: 8%;
+    transition: opacity 0.3s ease;
+}
+
+.art-title {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery{
+    column-count: 4;
+    column-gap: 1em;
+    padding: 1em;
+}
+
+.gallery-item{
+    break-inside: avoid;
+    margin-bottom: 1em;
 }
 
 .gallery-item img{

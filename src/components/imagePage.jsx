@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Gallery.css';
+import { useParams, useNavigate } from 'react-router-dom';
+import './imagePage.css';
 
 import ai from './art/ai.jpg';
 import amber from './art/amber.jpg';
@@ -60,21 +60,22 @@ const art = [
   { src: tanjiro, name: "Tanjiro" }
 ];
 
-const Gallery = () => {
-  return (
-    <div className="gallery">
-      {art.map((item, index) => (
-        <div className="gallery-item" key={index}>
-          <Link to={`/image/${encodeURIComponent(item.name)}`}>
-            <img src={item.src} alt={item.name} />
-            <div className="overlay">
-              <p className="art-title">{item.name}</p>
-            </div>
-          </Link>
+const ImagePage = () => {
+    const { imageName } = useParams();
+    const navigate = useNavigate();
+
+    const image = art.find(item => item.name === decodeURIComponent(imageName));
+
+    if (!image) {
+        return <div>Image not found</div>;
+    }
+
+    return (
+        <div className="image-page">
+            <button className="back-button" onClick={() => navigate('/')}>Back to Gallery</button>
+            <img src={image.src} alt={image.name} className="full-screen-image" />
         </div>
-      ))}
-    </div>
-  );
+    );
 };
 
-export default Gallery;
+export default ImagePage;
